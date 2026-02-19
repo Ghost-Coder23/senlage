@@ -1,11 +1,11 @@
-/* Base visibility fixes - ensure everything is visible */
+/* Dark theme admin product page with proper visibility */
 .model-product #content-main {
     background: linear-gradient(165deg, #0f172a, #1e3a8a 65%, #1d4ed8);
     border-radius: 18px;
     padding: 0.85rem;
 }
 
-/* Ensure all text is visible - use white for maximum contrast */
+/* Text visibility - light colors for dark background */
 .model-product #content-main h1,
 .model-product #content-main h2,
 .model-product #content-main h3,
@@ -21,50 +21,58 @@
 .model-product #content-main .helptext,
 .model-product #content-main .readonly,
 .model-product #content-main a {
-    color: #ffffff !important;
+    color: #e2e8f0 !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
 
-/* Make form inputs highly visible with white background and black text */
+/* Form inputs - light background with dark text for readability */
 .model-product #content-main input,
 .model-product #content-main textarea,
 .model-product #content-main select {
-    background: #ffffff !important;
-    color: #000000 !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
     border: 2px solid #60a5fa !important;
     visibility: visible !important;
     opacity: 1 !important;
+    border-radius: 8px;
+    padding: 8px 12px;
 }
 
-/* Module styling */
+/* Placeholder text */
+.model-product #content-main input::placeholder,
+.model-product #content-main textarea::placeholder {
+    color: #64748b !important;
+}
+
+/* Module styling - dark semi-transparent */
 .model-product .module,
 .model-product .inline-group,
 .model-product .submit-row {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(147, 197, 253, 0.4);
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(147, 197, 253, 0.3);
     box-shadow: 0 14px 30px rgba(2, 6, 23, 0.26);
 }
 
 .model-product .module h2,
 .model-product .module caption,
 .model-product caption {
-    background: rgba(30, 64, 175, 0.6);
-    color: #eff6ff !important;
+    background: rgba(30, 64, 175, 0.5);
+    color: #dbeafe !important;
     border-bottom: 1px solid rgba(147, 197, 253, 0.25);
 }
 
-/* Results table */
+/* Results table - dark theme */
 .model-product .results td,
 .model-product .results th {
     vertical-align: middle;
     color: #e2e8f0 !important;
-    border-color: rgba(148, 163, 184, 0.3) !important;
-    background: rgba(15, 23, 42, 0.5) !important;
+    border-color: rgba(148, 163, 184, 0.25) !important;
+    background: rgba(15, 23, 42, 0.6) !important;
 }
 
 .model-product .results thead th {
-    background: rgba(30, 64, 175, 0.6) !important;
+    background: rgba(30, 64, 175, 0.55) !important;
     color: #dbeafe !important;
 }
 
@@ -74,22 +82,27 @@
 }
 
 .model-product .results tbody tr:nth-child(even) {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(15, 23, 42, 0.65);
 }
 
 .model-product .results tbody tr:hover {
-    background: rgba(30, 64, 175, 0.5) !important;
+    background: rgba(30, 64, 175, 0.45) !important;
     transform: translateY(-1px);
     box-shadow: 0 8px 20px rgba(2, 6, 23, 0.2);
 }
 
 /* Title link */
 .model-product .field-title a {
-    color: #ffffff !important;
+    color: #60a5fa !important;
     font-weight: 700;
 }
 
-/* Ensure action links (edit/delete) are visible */
+.model-product .field-title a:hover {
+    color: #93c5fd !important;
+    text-decoration: underline;
+}
+
+/* Action links (edit/delete) - visible on all backgrounds */
 .model-product .results tbody tr td.action-checkbox,
 .model-product .results tbody tr td:nth-child(1) {
     vertical-align: middle;
@@ -105,7 +118,7 @@
 }
 
 .model-product .results tbody tr a:hover {
-    color: #93c5fd !important;
+    color: #ffffff !important;
     text-decoration: underline;
 }
 
@@ -129,7 +142,7 @@
 
 .model-product .field-price {
     font-weight: 700;
-    color: #93c5fd;
+    color: #34d399;
 }
 
 .model-product .field-subtitle {
@@ -137,6 +150,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #94a3b8 !important;
 }
 
 /* Change form styling */
@@ -150,61 +164,28 @@
 }
 
 .model-product .change-form .form-row {
-    border-top: 1px solid rgba(147, 197, 253, 0.3);
-    background: rgba(15, 23, 42, 0.5);
+    border-top: 1px solid rgba(147, 197, 253, 0.25);
+    background: rgba(15, 23, 42, 0.55);
     padding: 0.85rem 1rem;
 }
 
 .model-product .change-form .form-row label {
-    color: #dbeafe !important;
+    color: #93c5fd !important;
     font-weight: 700;
 }
 
 .model-product .change-form .help,
 .model-product .change-form .helptext {
-    color: #bfdbfe !important;
+    color: #94a3b8 !important;
     font-size: 0.82rem;
 }
 
 .model-product .change-form .readonly {
     color: #e2e8f0 !important;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(147, 197, 253, 0.35);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(147, 197, 253, 0.3);
     border-radius: 10px;
     padding: 0.45rem 0.6rem;
-}
-
-.model-product .change-form input[type="text"],
-.model-product .change-form input[type="number"],
-.model-product .change-form input[type="url"],
-.model-product .change-form textarea,
-.model-product .change-form select {
-    background: #ffffff !important;
-    border: 2px solid #60a5fa !important;
-    color: #000000 !important;
-}
-
-.model-product .change-form input::placeholder,
-.model-product .change-form textarea::placeholder {
-    color: #64748b !important;
-}
-
-.model-product .change-form input:focus,
-.model-product .change-form textarea:focus,
-.model-product .change-form select:focus {
-    border-color: #93c5fd !important;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.28) !important;
-}
-
-.model-product .change-form textarea#id_description,
-.model-product .change-form textarea#id_features {
-    min-height: 120px;
-}
-
-.model-product .field-image_preview img {
-    display: block;
-    margin-top: 0.2rem;
-    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.28);
 }
 
 /* Submit row - buttons */
@@ -219,6 +200,8 @@
     border: 1px solid rgba(147, 197, 253, 0.5);
     color: #ffffff !important;
     background: linear-gradient(120deg, #2563eb, #0f766e) !important;
+    border-radius: 8px;
+    padding: 10px 20px;
 }
 
 .model-product .submit-row input:hover,
@@ -235,6 +218,7 @@
     border: none !important;
     visibility: visible !important;
     opacity: 1 !important;
+    border-radius: 8px;
 }
 
 /* Responsive */
