@@ -967,6 +967,41 @@ video {
 	background: rgba(30, 64, 175, 0.45);
 }
 
+.contact-call-link {
+	padding: 0.4rem 0.7rem;
+}
+
+.contact-call-icon {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+	display: block;
+}
+
+.contact-whatsapp-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.contact-whatsapp-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	display: block;
+}
+
+.contact-facebook-link {
+	padding: 0.4rem 0.7rem;
+}
+
+.contact-facebook-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	display: block;
+}
+
 .contact-form {
 	display: grid;
 	gap: 1.1rem;

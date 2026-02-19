@@ -62,6 +62,42 @@
     font-weight: 700;
 }
 
+/* Ensure action links (edit/delete) are visible */
+.model-product .results tbody tr td.action-checkbox,
+.model-product .results tbody tr td:nth-child(1) {
+    vertical-align: middle;
+}
+
+.model-product .results tbody tr a,
+.model-product .results tbody tr a:link,
+.model-product .results tbody tr a:visited {
+    color: #60a5fa !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.model-product .results tbody tr a:hover {
+    color: #93c5fd !important;
+    text-decoration: underline;
+}
+
+/* Action column styling */
+.model-product .results .field__actions,
+.model-product .results .row-actions {
+    white-space: nowrap;
+}
+
+.model-product .results .row-actions a {
+    color: #60a5fa !important;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.model-product .results .row-actions a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
 .model-product .field-price {
     font-weight: 700;
     color: #93c5fd;

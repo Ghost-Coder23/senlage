@@ -7,8 +7,7 @@
 <style>
     body {
         background:
-            linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(14, 116, 144, 0.1) 50%, rgba(30, 64, 175, 0.08) 100%),
-            #f8fbff !important;
+            linear-gradient(135deg, #0b1736 0%, #102a5a 45%, #0f3d63 100%) !important;
     }
 </style>
 {% endblock %}
@@ -47,13 +46,12 @@
                         <span>📦</span>
                     </div>
                     {% endif %}
-
-                    {% if product.price %}
-                    <div class="product-price">${{ product.price }}</div>
-                    {% endif %}
                 </div>
 
                 <div class="product-detail-content">
+                    {% if product.price %}
+                    <div class="product-price">${{ product.price }}</div>
+                    {% endif %}
                     <h1>{{ product.title }}</h1>
                     <div class="product-subtitle">{{ product.subtitle }}</div>
                     <p>{{ product.description }}</p>
@@ -94,18 +92,17 @@
         }
 
         .product-detail-card {
-            background: #ffffff3f;
+            background: #ffffff;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: block;
         }
 
         .product-detail-image {
             position: relative;
             min-height: 320px;
-            background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+            background: linear-gradient(135deg, #1dd8c8 0%, #0f766e 100%);
         }
 
         .product-detail-image img {
@@ -124,9 +121,8 @@
         }
 
         .product-price {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+            display: inline-block;
+            margin-bottom: 12px;
             background: #e0cd1f;
             color: #333;
             padding: 8px 15px;
@@ -195,10 +191,6 @@
         @media (max-width: 800px) {
             .product-detail-section {
                 padding: 100px 14px 40px;
-            }
-
-            .product-detail-card {
-                grid-template-columns: 1fr;
             }
 
             .product-detail-image {
