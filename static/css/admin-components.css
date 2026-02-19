@@ -1,0 +1,80 @@
+.admin-range-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.admin-range-btn {
+    border: 1px solid rgba(255, 255, 255, 0.58) !important;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background: rgba(11, 18, 32, 0.45) !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: none !important;
+}
+
+.admin-range-btn:hover {
+    background: rgba(11, 18, 32, 0.62) !important;
+    color: #ffffff !important;
+}
+
+.admin-range-btn--active {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #ffffff !important;
+    text-shadow: none;
+}
+
+.admin-range-btn--active:hover {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.admin-chip-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.admin-chip-btn:link,
+.admin-chip-btn:visited,
+.admin-chip-btn:hover,
+.admin-chip-btn:active,
+.admin-chip-btn:focus {
+    color: #fff !important;
+}
+
+.admin-chip-btn--dark {
+    background: #0f172a;
+}
+
+.admin-chip-btn--dark:hover {
+    background: #1e293b;
+}
+
+.admin-chip-btn--blue {
+    background: #2563eb;
+}
+
+.admin-chip-btn--blue:hover {
+    background: #1e40af;
+}
+
+.admin-empty-state {
+    margin: 0;
+    border: 1px solid #fcd34d;
+    background: #fffbeb;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #92400e !important;
+}

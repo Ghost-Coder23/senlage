@@ -1,0 +1,67 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="admin-dashboard">
+    <section class="admin-hero-panel">
+        <div class="admin-hero-content-row">
+            <div class="admin-hero-copy">
+                <p class="admin-kicker">Dashboard</p>
+                <h2 class="admin-hero-title">Senlage Investments Admin</h2>
+                <p class="admin-hero-subtitle">Manage products, content, and operations from a unified workspace.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-stats-grid">
+        <article class="admin-stat-card">
+            <p class="admin-stat-label">Apps</p>
+            <p class="admin-stat-value">{{ app_list|length }}</p>
+        </article>
+        <article class="admin-stat-card">
+            <p class="admin-stat-label">Signed In As</p>
+            <p class="admin-stat-value admin-stat-value--medium">{{ request.user.get_username }}</p>
+        </article>
+        <article class="admin-stat-card">
+            <p class="admin-stat-label">Last Login</p>
+            <p class="admin-stat-value admin-stat-value--medium">{% if request.user.last_login %}{{ request.user.last_login|date:"M d, Y H:i" }}{% else %}N/A{% endif %}</p>
+        </article>
+    </section>
+
+    <section>
+        <h3 class="admin-section-title admin-section-title--with-space">Applications</h3>
+        {% if app_list %}
+        <div class="admin-app-grid">
+            {% for app in app_list %}
+            <article class="admin-app-card">
+                <div class="admin-app-card-head">
+                    <h4 class="admin-app-title">{{ app.name }}</h4>
+                    <span class="admin-model-count">{{ app.models|length }} models</span>
+                </div>
+
+                <ul class="admin-model-list">
+                    {% for model in app.models %}
+                    <li class="admin-model-item">
+                        <div class="admin-model-row">
+                            <span class="admin-model-name">{{ model.name }}</span>
+                            <div class="admin-model-actions">
+                                {% if model.admin_url %}
+                                <a class="admin-chip-btn admin-chip-btn--dark" href="{{ model.admin_url }}">Manage</a>
+                                {% endif %}
+                                {% if model.add_url %}
+                                <a class="admin-chip-btn admin-chip-btn--blue" href="{{ model.add_url }}">Add</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="admin-empty-state">{% translate "You don't have permission to view or edit anything." %}</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

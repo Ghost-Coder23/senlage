@@ -1,0 +1,163 @@
+.model-product #content-main {
+    background: linear-gradient(165deg, #0f172a, #1e3a8a 65%, #1d4ed8);
+    border-radius: 18px;
+    padding: 0.85rem;
+}
+
+.model-product #content-main h1,
+.model-product #content-main h2,
+.model-product #content-main h3,
+.model-product #content-main label,
+.model-product #content-main p,
+.model-product #content-main .help,
+.model-product #content-main .helptext {
+    color: #dbeafe !important;
+}
+
+.model-product .module,
+.model-product .inline-group,
+.model-product .submit-row {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(147, 197, 253, 0.25);
+    box-shadow: 0 14px 30px rgba(2, 6, 23, 0.26);
+}
+
+.model-product .module h2,
+.model-product .module caption,
+.model-product caption {
+    background: rgba(30, 64, 175, 0.45);
+    color: #eff6ff !important;
+    border-bottom: 1px solid rgba(147, 197, 253, 0.25);
+}
+
+.model-product .results td,
+.model-product .results th {
+    vertical-align: middle;
+    color: #e2e8f0 !important;
+    border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+.model-product .results thead th {
+    background: rgba(30, 64, 175, 0.52);
+    color: #dbeafe !important;
+}
+
+.model-product .results tbody tr {
+    background: rgba(15, 23, 42, 0.36);
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.model-product .results tbody tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.model-product .results tbody tr:hover {
+    background: rgba(30, 64, 175, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.2);
+}
+
+.model-product .field-title a {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.model-product .field-price {
+    font-weight: 700;
+    color: #93c5fd;
+}
+
+.model-product .field-subtitle {
+    max-width: 28ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.model-product .change-form .module.aligned {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.model-product .change-form .module h2 {
+    padding: 0.85rem 1rem;
+}
+
+.model-product .change-form .form-row {
+    border-top: 1px solid rgba(147, 197, 253, 0.22);
+    background: rgba(15, 23, 42, 0.28);
+    padding: 0.85rem 1rem;
+}
+
+.model-product .change-form .form-row label {
+    color: #dbeafe !important;
+    font-weight: 700;
+}
+
+.model-product .change-form .help,
+.model-product .change-form .helptext {
+    color: #bfdbfe !important;
+    font-size: 0.82rem;
+}
+
+.model-product .change-form .readonly {
+    color: #e2e8f0 !important;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(147, 197, 253, 0.35);
+    border-radius: 10px;
+    padding: 0.45rem 0.6rem;
+}
+
+.model-product .change-form input[type="text"],
+.model-product .change-form input[type="number"],
+.model-product .change-form input[type="url"],
+.model-product .change-form textarea,
+.model-product .change-form select {
+    background: rgba(15, 23, 42, 0.72) !important;
+    border-color: rgba(147, 197, 253, 0.45) !important;
+    color: #000000 !important;
+}
+
+.model-product .change-form input::placeholder,
+.model-product .change-form textarea::placeholder {
+    color: rgba(191, 219, 254, 0.82) !important;
+}
+
+.model-product .change-form input:focus,
+.model-product .change-form textarea:focus,
+.model-product .change-form select:focus {
+    border-color: #93c5fd !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.28) !important;
+}
+
+.model-product .change-form textarea#id_description,
+.model-product .change-form textarea#id_features {
+    min-height: 120px;
+}
+
+.model-product .field-image_preview img {
+    display: block;
+    margin-top: 0.2rem;
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.28);
+}
+
+.model-product .submit-row {
+    position: sticky;
+    bottom: 10px;
+    z-index: 8;
+}
+
+.model-product .submit-row input,
+.model-product .submit-row a.deletelink {
+    border: 1px solid rgba(147, 197, 253, 0.35);
+}
+
+@media (max-width: 900px) {
+    .model-product .field-subtitle {
+        max-width: 18ch;
+    }
+
+    .model-product .submit-row {
+        position: static;
+    }
+}

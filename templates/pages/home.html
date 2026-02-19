@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Senlage Investments - Transform Your Business{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background:
+            linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(14, 116, 144, 0.1) 50%, rgba(30, 64, 175, 0.08) 100%),
+            #f8fbff;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="{% static 'images/logo.jpeg' %}" alt="Senlage Investments Logo" class="logo-image">
+                <span>Senlage Investments</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="geometric-shapes">
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+        </div>
+        <div class="hero-content">
+            <h1 id="hero-headline">Be    Safe!<br>Be Sure!</h1>
+            <p id="hero-paragraph">Senlage Investments is a manufacturing
+             trading and filtration company which supplies
+            all protective and safety wear. The products are
+            grouped into three categories.</p>
+            <a href="{% url 'products' %}" class="cta-button">View Our Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section about fade-in">
+            <div class="about-content">
+                <div class="highlight">About Us</div>
+                <h2 class="mission-heading">
+                    <span class="mission-our">OUR</span>
+                    <span class="mission-word">MISSION</span>
+                </h2>
+                <p>At Senlage Investments (Pvt) Ltd, our mission is to provide high-quality products and services supported by trusted client partnerships. We are committed to maintaining the highest health and safety standards while delivering practical, reliable solutions tailored to our clients' needs.</p>
+                <p>We strive for quick delivery without compromising quality, ensuring our customers receive dependable service every time.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Quality & Excellence</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Reliability & Professionalism</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Hard Work & Commitment</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Ethical Practices</div>
+                    </div>
+                </div>
+                
+                <p class="core-values-heading">
+                    <span class="core-word">CORE</span>
+                    <span class="values-card">VALUES</span>
+                </p>
+                <p>.Quick delivery of high-quality work <br>.Reliability :Upholding of intergrity & 
+                professionalism<br> Hardwork : selfless commitment and dedication to duty by motivated staff
+            <br>.Ethical practises : A work ethic founded on trust.
+            <br>.Excellence: continuous improvement on innovations guided by
+                autonomy and empowerment
+            <br>.Team work : a unity of purpose of a loving family focusing on
+                customers and social responsibility.</p>
+            </div>
+            <div class="about-visual">
+                <div class="about-image">
+                    <div class="visual-shapes">
+                        <div class="visual-shape"></div>
+                        <div class="visual-shape"></div>
+                        <div class="visual-shape"></div>
+                    </div>
+                    <img src="{% static 'images/bg.jpg' %}" alt="Senlage Investments">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section">
+            <h2 class="section-title fade-in">Need Something ? Contact Us</h2>
+            <div class="contact-content">
+                <p>Our team is available to assist you with product enquiries,
+                    quotations, bulk orders, and custom colour combinations..</p>
+                <form class="contact-form fade-in">
+                    <div class="contact-form-head">
+                    </div>
+                    <div class="contact-fields">
+                        <div class="contact-field">
+                            <label for="contact-name">Name</label>
+                            <input id="contact-name" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="contact-field">
+                            <label for="contact-email">Email Address</label>
+                            <input id="contact-email" type="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="contact-field contact-field-full">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" placeholder="Describe your strategic vision and transformation goals..." required></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:info@senlageinvestments.com" class="contact-link-item">info@senlageinvestments.com</a>
+                <a href="tel:+263770123456" class="contact-link-item">+263 77 012 3456</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

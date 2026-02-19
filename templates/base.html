@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Senlage Investments - Transform Your Business{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/tooplate-strategic-style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    <a href="https://www.google.com/maps/search/?api=1&query=127+Nelson+Mandela+Avenue%2C+Harare%2C+Zimbabwe" target="_blank" rel="noopener noreferrer" class="floating-location-icon" aria-label="Open location on map" title="Open location">
+        <img src="{% static 'images/location.png' %}" alt="Location icon">
+    </a>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                © {% now "Y" %} Senlage Investments. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{% static 'js/tooplate-strategic-scripts.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

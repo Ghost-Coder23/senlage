@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}
+{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | Senlage Investments Admin
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin-base.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin-components.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin-dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin-login.css' %}">
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Senlage Investments Control Panel</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
