@@ -84,8 +84,8 @@
     <style>
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
             padding: 10px 0;
         }
         
@@ -159,30 +159,54 @@
             font-size: 18px;
         }
 
-        @media (max-width: 700px) {
+        @media (min-width: 1200px) {
             .products-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 16px;
+                grid-template-columns: repeat(6, minmax(0, 1fr));
             }
 
             .product-image {
-                height: 180px;
+                height: 150px;
             }
 
             .product-content {
-                padding: 18px;
+                padding: 12px;
             }
 
             .product-price {
-                font-size: 16px;
-                padding: 6px 12px;
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .products-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .product-image {
+                height: 120px;
+            }
+
+            .product-content {
+                padding: 10px;
+            }
+
+            .product-price {
+                font-size: 12px;
+                padding: 4px 8px;
+                margin-bottom: 8px;
+            }
+
+            .product-details-link {
+                font-size: 12px;
             }
         }
 
         @media (max-width: 520px) {
             .products-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 10px;
             }
 
             .product-card:hover {
@@ -190,7 +214,20 @@
             }
 
             .product-image {
-                height: 200px;
+                height: 95px;
+            }
+
+            .product-content {
+                padding: 8px;
+            }
+
+            .product-price {
+                font-size: 11px;
+                padding: 3px 7px;
+            }
+
+            .product-details-link {
+                font-size: 11px;
             }
         }
     </style>
