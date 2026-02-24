@@ -195,6 +195,11 @@
     z-index: 8;
 }
 
+/* Hide "Save and continue editing" button */
+.model-product .submit-row input[name="_continue"] {
+    display: none !important;
+}
+
 .model-product .submit-row input,
 .model-product .submit-row a.deletelink {
     border: 1px solid rgba(147, 197, 253, 0.5);
@@ -231,4 +236,3 @@
         position: static;
     }
 }
-

@@ -22,13 +22,13 @@ class ProductAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'subtitle', 'is_active'),
+            'fields': ('title', 'is_active'),
         }),
         ('Pricing & Media', {
             'fields': ('price', 'image', 'image_preview'),
         }),
         ('Description & Features', {
-            'fields': ('description', 'features'),
+            'fields': ('description',),
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),
@@ -59,7 +59,7 @@ class ProductAdmin(admin.ModelAdmin):
     @admin.display(description='Actions')
     def actions_column(self, obj):
         return format_html(
-            '<a href="/admin/pages/product/{}/change/" class="button" style="background: #2563eb; color: white; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-size: 13px;">Edit</a>',
+            '<a href="/admin/pages/product/{}/change/" class="button" style="background:#2563eb;color:white;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">Edit</a>',
             obj.pk
         )
 
