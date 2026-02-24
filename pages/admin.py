@@ -10,7 +10,7 @@ admin.site.index_title = "Dashboard"
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('image_thumb', 'title', 'subtitle', 'price', 'is_active', 'updated_at')
+    list_display = ('image_thumb', 'title', 'subtitle', 'price', 'is_active', 'updated_at', 'actions_column')
     list_display_links = ('title',)
     list_editable = ('is_active',)
     list_filter = ('is_active', 'created_at', 'updated_at')
@@ -55,6 +55,13 @@ class ProductAdmin(admin.ModelAdmin):
                 obj.title,
             )
         return 'No image uploaded'
+
+    @admin.display(description='Actions')
+    def actions_column(self, obj):
+        return format_html(
+            '<a href="/admin/pages/product/{}/change/" class="button" style="background: #2563eb; color: white; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-size: 13px;">Edit</a>',
+            obj.pk
+        )
 
     class Media:
         css = {
