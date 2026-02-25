@@ -148,29 +148,19 @@ video {
 	box-shadow: 0 8px 18px rgba(29, 78, 216, 0.28);
 }
 
-.mobile-contact-link {
+.mobile-menu {
 	display: none;
-	text-decoration: none;
-	width: 72px;
-	height: 72px;
-	border-radius: 50%;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	font-size: 0.72rem;
-	font-weight: 700;
-	line-height: 1.1;
-	letter-spacing: 0.02em;
-	color: #ffffff;
-	background: linear-gradient(135deg, #1d4ed8, #0f766e);
-	border: 1px solid rgba(255, 255, 255, 0.65);
-	box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	flex-direction: column;
+	cursor: pointer;
 }
 
-.mobile-contact-link:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 16px 28px rgba(15, 23, 42, 0.28);
+.mobile-menu span {
+	width: 28px;
+	height: 3px;
+	background: #1e3a8a;
+	margin: 4px 0;
+	transition: 0.3s;
+	border-radius: 2px;
 }
 
 /* Hero Section */
@@ -1047,6 +1037,10 @@ video {
 	display: block;
 }
 
+.contact-email-link::before {
+	display: none;
+}
+
 .contact-form {
 	display: grid;
 	gap: 1.1rem;
@@ -1227,8 +1221,42 @@ video {
 		padding: 0.65rem 0.9rem;
 	}
 
-	.mobile-contact-link {
+	.mobile-menu {
 		display: flex;
+	}
+
+	.contact-links {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.55rem;
+	}
+
+	.contact-email-link,
+	.contact-whatsapp-link,
+	.contact-facebook-link {
+		width: 52px;
+		height: 52px;
+		min-width: 52px;
+		padding: 0;
+		border-radius: 50%;
+	}
+
+	.contact-whatsapp-link,
+	.contact-facebook-link {
+		gap: 0;
+	}
+
+	.contact-email-link {
+		font-size: 0;
+	}
+
+	.contact-email-link::before {
+		content: '@';
+		display: inline-block;
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: #dbeafe;
+		line-height: 1;
 	}
 
 	.core-values-list {
