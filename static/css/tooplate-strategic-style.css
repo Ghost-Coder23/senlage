@@ -148,19 +148,29 @@ video {
 	box-shadow: 0 8px 18px rgba(29, 78, 216, 0.28);
 }
 
-.mobile-menu {
+.mobile-contact-link {
 	display: none;
-	flex-direction: column;
-	cursor: pointer;
+	text-decoration: none;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 0.72rem;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	background: linear-gradient(135deg, #1d4ed8, #0f766e);
+	border: 1px solid rgba(255, 255, 255, 0.65);
+	box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mobile-menu span {
-	width: 28px;
-	height: 3px;
-	background: #1e3a8a;
-	margin: 4px 0;
-	transition: 0.3s;
-	border-radius: 2px;
+.mobile-contact-link:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 16px 28px rgba(15, 23, 42, 0.28);
 }
 
 /* Hero Section */
@@ -1182,7 +1192,7 @@ video {
 		padding: 0.65rem 0.9rem;
 	}
 
-	.mobile-menu {
+	.mobile-contact-link {
 		display: flex;
 	}
 
