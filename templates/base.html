@@ -5,7 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Senlage Investments - Transform Your Business{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Senlage Investments provides safety wear, filtration products, and reliable industrial supply solutions.{% endblock %}">
+    <meta name="robots" content="{% block meta_robots %}index,follow{% endblock %}">
+    <link rel="canonical" href="{% block canonical_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock %}">
+    <meta property="og:site_name" content="Senlage Investments">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Senlage Investments - Transform Your Business{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Senlage Investments provides safety wear, filtration products, and reliable industrial supply solutions.{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.jpeg' %}{% endblock %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Senlage Investments - Transform Your Business{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Senlage Investments provides safety wear, filtration products, and reliable industrial supply solutions.{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.jpeg' %}{% endblock %}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ request.scheme }}://{{ request.get_host }}{% url 'sitemap_xml' %}">
     <link rel="stylesheet" href="{% static 'css/tooplate-strategic-style.css' %}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Senlage Investments",
+      "url": "{{ request.scheme }}://{{ request.get_host }}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.jpeg' %}",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100083305300862"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+263770123456",
+        "email": "info@senlageinvestments.com"
+      }
+    }
+    </script>
+    {% block structured_data %}{% endblock %}
     {% block extra_css %}{% endblock %}
 </head>
 <body>
