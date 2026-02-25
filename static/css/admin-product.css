@@ -1,11 +1,11 @@
-/* Dark theme admin product page with proper visibility */
+/* Admin Product Page - Enhanced Theme */
 .model-product #content-main {
-    background: linear-gradient(165deg, #0f172a, #1e3a8a 65%, #1d4ed8);
-    border-radius: 18px;
-    padding: 0.85rem;
+    background: #f0f4f8;
+    border-radius: 16px;
+    padding: 1.5rem;
 }
 
-/* Text visibility - light colors for dark background */
+/* Text visibility - high contrast */
 .model-product #content-main h1,
 .model-product #content-main h2,
 .model-product #content-main h3,
@@ -21,178 +21,196 @@
 .model-product #content-main .helptext,
 .model-product #content-main .readonly,
 .model-product #content-main a {
-    color: #e2e8f0 !important;
+    color: #1a202c !important;
     visibility: visible !important;
-    opacity: 1 !important;
 }
 
-/* Form inputs - light background with dark text for readability */
+/* Form inputs - bright white with clear borders */
 .model-product #content-main input,
 .model-product #content-main textarea,
 .model-product #content-main select {
-    background: #f8fafc !important;
-    color: #0f172a !important;
-    border: 2px solid #60a5fa !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    background: #ffffff !important;
+    color: #1a202c !important;
+    border: 2px solid #cbd5e0 !important;
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.9375rem;
+    min-height: 44px;
+}
+
+.model-product #content-main input:focus,
+.model-product #content-main textarea:focus,
+.model-product #content-main select:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+    outline: none;
 }
 
 /* Placeholder text */
 .model-product #content-main input::placeholder,
 .model-product #content-main textarea::placeholder {
-    color: #64748b !important;
+    color: #a0aec0 !important;
 }
 
-/* Module styling - dark semi-transparent */
+/* Module styling */
 .model-product .module,
 .model-product .inline-group,
 .model-product .submit-row {
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(147, 197, 253, 0.3);
-    box-shadow: 0 14px 30px rgba(2, 6, 23, 0.26);
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .model-product .module h2,
 .model-product .module caption,
 .model-product caption {
-    background: rgba(30, 64, 175, 0.5);
-    color: #dbeafe !important;
-    border-bottom: 1px solid rgba(147, 197, 253, 0.25);
+    background: #f7fafc;
+    color: #1a202c !important;
+    border-bottom: 2px solid #cbd5e0;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
 }
 
-/* Results table - dark theme */
+/* Results table - High visibility */
 .model-product .results td,
 .model-product .results th {
     vertical-align: middle;
-    color: #e2e8f0 !important;
-    border-color: rgba(148, 163, 184, 0.25) !important;
-    background: rgba(15, 23, 42, 0.6) !important;
+    color: #1a202c !important;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff !important;
+    padding: 0.75rem 1rem;
 }
 
 .model-product .results thead th {
-    background: rgba(30, 64, 175, 0.55) !important;
-    color: #dbeafe !important;
+    background: #1e3a8a !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
 }
 
 .model-product .results tbody tr {
-    background: rgba(15, 23, 42, 0.5);
-    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    background: #ffffff;
+    transition: all 0.2s ease;
 }
 
 .model-product .results tbody tr:nth-child(even) {
-    background: rgba(15, 23, 42, 0.65);
+    background: #f8fafc;
 }
 
 .model-product .results tbody tr:hover {
-    background: rgba(30, 64, 175, 0.45) !important;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.2);
+    background: #e0f2fe !important;
 }
 
 /* Title link */
 .model-product .field-title a {
-    color: #60a5fa !important;
+    color: #2563eb !important;
     font-weight: 700;
+    font-size: 1rem;
 }
 
 .model-product .field-title a:hover {
-    color: #93c5fd !important;
+    color: #1d4ed8 !important;
     text-decoration: underline;
 }
 
-/* Action links (edit/delete) - visible on all backgrounds */
-.model-product .results tbody tr td.action-checkbox,
-.model-product .results tbody tr td:nth-child(1) {
-    vertical-align: middle;
-}
-
-.model-product .results tbody tr a,
-.model-product .results tbody tr a:link,
-.model-product .results tbody tr a:visited {
-    color: #60a5fa !important;
-    font-weight: 600;
-    text-decoration: none;
-    visibility: visible !important;
-}
-
-.model-product .results tbody tr a:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
-}
-
-/* Action column styling */
-.model-product .results .field__actions,
-.model-product .results .row-actions {
-    white-space: nowrap;
-}
-
-.model-product .results .row-actions a {
-    color: #60a5fa !important;
-    margin-right: 8px;
-    font-weight: 500;
-    visibility: visible !important;
-}
-
-.model-product .results .row-actions a:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
-}
-
+/* Price field - Green for visibility */
 .model-product .field-price {
     font-weight: 700;
-    color: #34d399;
+    color: #16a34a !important;
+    background: #dcfce7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
 }
 
+/* Subtitle field */
 .model-product .field-subtitle {
-    max-width: 28ch;
+    max-width: 30ch;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #94a3b8 !important;
+    color: #4a5568 !important;
+}
+
+/* Active status */
+.model-product .field-is_active .true {
+    color: #16a34a !important;
+    font-weight: 700;
+}
+
+.model-product .field-is_active .false {
+    color: #dc2626 !important;
+    font-weight: 700;
+}
+
+/* Action links */
+.model-product .results tbody tr a,
+.model-product .results tbody tr a:link,
+.model-product .results tbody tr a:visited {
+    color: #2563eb !important;
+    font-weight: 600;
+}
+
+.model-product .results tbody tr a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline;
 }
 
 /* Change form styling */
 .model-product .change-form .module.aligned {
-    border-radius: 16px;
-    overflow: hidden;
+    border-radius: 12px;
 }
 
 .model-product .change-form .module h2 {
-    padding: 0.85rem 1rem;
+    padding: 0.75rem 1rem;
 }
 
 .model-product .change-form .form-row {
-    border-top: 1px solid rgba(147, 197, 253, 0.25);
-    background: rgba(15, 23, 42, 0.55);
-    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.model-product .change-form .form-row:last-child {
+    border-bottom: none;
 }
 
 .model-product .change-form .form-row label {
-    color: #93c5fd !important;
+    color: #1a202c !important;
     font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    display: block;
 }
 
 .model-product .change-form .help,
 .model-product .change-form .helptext {
-    color: #94a3b8 !important;
-    font-size: 0.82rem;
+    color: #4a5568 !important;
+    font-size: 0.8125rem;
+    margin-top: 0.25rem;
 }
 
 .model-product .change-form .readonly {
-    color: #e2e8f0 !important;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(147, 197, 253, 0.3);
-    border-radius: 10px;
-    padding: 0.45rem 0.6rem;
+    color: #4a5568 !important;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
 }
 
-/* Submit row - buttons */
+/* Submit row */
 .model-product .submit-row {
     position: sticky;
-    bottom: 10px;
-    z-index: 8;
+    bottom: 0;
+    z-index: 10;
+    background: #f8fafc;
+    border-top: 2px solid #cbd5e0;
+    padding: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 /* Hide "Save and continue editing" button */
@@ -200,39 +218,85 @@
     display: none !important;
 }
 
-.model-product .submit-row input,
-.model-product .submit-row a.deletelink {
-    border: 1px solid rgba(147, 197, 253, 0.5);
+/* Save buttons */
+.model-product .submit-row input[name="_save"],
+.model-product .submit-row input[name="_addanother"] {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
     color: #ffffff !important;
-    background: linear-gradient(120deg, #2563eb, #0f766e) !important;
+    border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    min-width: 120px;
 }
 
-.model-product .submit-row input:hover,
+.model-product .submit-row input:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* Delete button - Red */
+.model-product .submit-row a.deletelink {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .model-product .submit-row a.deletelink:hover {
-    filter: brightness(1.1);
+    background: #b91c1c !important;
 }
 
-/* Ensure buttons are visible */
+/* Buttons visibility */
 .model-product input[type="submit"],
 .model-product input[type="button"],
 .model-product .button {
-    background: linear-gradient(120deg, #2563eb, #0f766e) !important;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
     color: #ffffff !important;
     border: none !important;
-    visibility: visible !important;
-    opacity: 1 !important;
     border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+/* Image preview */
+.model-product .field-image img {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Action column in list */
+.model-product .results .row-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.model-product .results .row-actions a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+}
+
+.model-product .results .row-actions a:hover {
+    text-decoration: none;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
     .model-product .field-subtitle {
-        max-width: 18ch;
+        max-width: 20ch;
     }
-
+    
     .model-product .submit-row {
         position: static;
+        flex-direction: column;
+    }
+    
+    .model-product .submit-row input,
+    .model-product .submit-row a.deletelink {
+        width: 100%;
     }
 }
