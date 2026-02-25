@@ -1047,6 +1047,31 @@ video {
 	margin-top: 0;
 }
 
+.contact-form-alerts {
+	display: grid;
+	gap: 0.6rem;
+	margin: 0 0 1rem;
+}
+
+.contact-form-alert {
+	padding: 0.75rem 0.9rem;
+	border-radius: 10px;
+	font-size: 0.92rem;
+	font-weight: 600;
+}
+
+.contact-form-alert.success {
+	background: rgba(16, 185, 129, 0.2);
+	color: #d1fae5;
+	border: 1px solid rgba(52, 211, 153, 0.6);
+}
+
+.contact-form-alert.error {
+	background: rgba(239, 68, 68, 0.2);
+	color: #fee2e2;
+	border: 1px solid rgba(248, 113, 113, 0.6);
+}
+
 .contact-form-head h3 {
 	margin: 0;
 	font-size: 1.4rem;

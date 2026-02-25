@@ -1,11 +1,44 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from django.urls import reverse
+from django.conf import settings
+from django.contrib import messages
+from django.core.mail import send_mail
 from .models import Product
+from .forms import ContactForm
 
 
 def home(request):
-    return render(request, 'pages/home.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            subject = f'New Contact Form Message from {name}'
+            body = (
+                f'Name: {name}\n'
+                f'Email: {email}\n\n'
+                f'Message:\n{message}'
+            )
+
+            try:
+                send_mail(
+                    subject=subject,
+                    message=body,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[settings.CONTACT_RECEIVER_EMAIL],
+                    fail_silently=False,
+                )
+                messages.success(request, 'Your message was sent successfully.')
+            except Exception:
+                messages.error(request, 'Unable to send your message right now. Please try again.')
+            return redirect(f"{reverse('home')}#contact")
+        messages.error(request, 'Please fill in all fields with valid information.')
+        return redirect(f"{reverse('home')}#contact")
+
+    return render(request, 'pages/home.html', {'contact_form': ContactForm()})
 
 
 def products(request):
